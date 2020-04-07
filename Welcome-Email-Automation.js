@@ -1,11 +1,13 @@
 // the specific Adopt a Neighbor community used in the subject line
 const nameOfCommunity = 'Ashland';
 // The names of the organizing team for this particular community"
-const organizers = "Cathy, Tonya, Chuck, Blaire, Mica, and Dylan";
+const organizers = 'Cathy, Tonya, Chuck, Blaire, Mica, and Dylan';
 // The URL of the volunteer spreadsheet being accessed and modified
 const volunteerSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3Ccrqx_ckIaK5KQKn5MjdUzpnwqT7wEu5Pjm5M/edit';
+const nameOfVolunteerWorksheet = 'Volunteers';
 // The URL of the main spreadsheet being accessed and modified
 const neighborSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3Ccrqx_ckIaK5KQKn5MjdUzpnwqT7wEu5Pjm5M/edit';
+const nameOfNeighborWorksheet = "Neighbors";
 // The email address that volunteers and neighbors should reply to
 const replyTo = 'neighborhood.response.team@gmail.com';
 // The subject line for the three email templates;
@@ -23,7 +25,7 @@ const populateTemplateWithNameSubstitution = (template, name) => {
 function sendWelcomeEmailToVolunteer() {
   // Number of the column keeping track of whether or not the row was processed and email sent, so that the script can be restarted if it doesn't complete.
   const emailSentColumn = 19;
-  const sheet = SpreadsheetApp.openByUrl(volunteerSpreadsheetUrl).getSheetByName('Volunteers');
+  const sheet = SpreadsheetApp.openByUrl(volunteerSpreadsheetUrl).getSheetByName(nameOfVolunteerWorksheet);
   const startRow = 2;
   const lastRow = sheet.getLastRow();
   const dataRange = sheet.getRange(startRow, 1, lastRow - 1, emailSentColumn);
@@ -60,7 +62,7 @@ function sendWelcomeEmailToVolunteer() {
 function sendWelcomeEmailToNeighbor() {
   // Number of the column keeping track of whether or not the row was processed and email sent, so that the script can be restarted if it doesn't complete.
   const emailSentColumn = 17;
-  const sheet = SpreadsheetApp.openByUrl(neighborSpreadsheetUrl).getSheetByName('Neighbors');
+  const sheet = SpreadsheetApp.openByUrl(neighborSpreadsheetUrl).getSheetByName(nameOfNeighborWorksheet);
   const startRow = 2;
   const lastRow = sheet.getLastRow();
   const dataRange = sheet.getRange(startRow, 1, lastRow - 1, emailSentColumn);
