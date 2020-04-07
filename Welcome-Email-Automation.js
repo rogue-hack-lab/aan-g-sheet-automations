@@ -7,7 +7,7 @@ const volunteerSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3C
 const nameOfVolunteerWorksheet = 'Volunteers';
 // The URL of the main spreadsheet being accessed and modified
 const neighborSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3Ccrqx_ckIaK5KQKn5MjdUzpnwqT7wEu5Pjm5M/edit';
-const nameOfNeighborWorksheet = "Neighbors";
+const nameOfNeighborWorksheet = 'Neighbors';
 // The email address that volunteers and neighbors should reply to
 const replyTo = 'neighborhood.response.team@gmail.com';
 // The subject line for the three email templates;
@@ -67,7 +67,7 @@ function sendWelcomeEmailToNeighbor() {
   const lastRow = sheet.getLastRow();
   const dataRange = sheet.getRange(startRow, 1, lastRow - 1, emailSentColumn);
   const data = dataRange.getValues();
-  const template = HtmlService.createTemplateFromFile('template-neighbor');
+  const template = HtmlService.createTemplateFromFile('template-neighbors');
   for (var i = 0; i < data.length; ++i) {
     const row = data[i];
     const name = row[1];
