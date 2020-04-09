@@ -1,19 +1,19 @@
 // the specific Adopt a Neighbor community used in the subject line
-const nameOfCommunity = 'Ashland';
-// The names of the organizing team for this particular community"
-const organizers = 'Cathy, Tonya, Chuck, Blaire, Mica, and Dylan';
+const nameOfCommunity = 'Hillside';
+// The names of the organizing team for this particular community
+const organizers = 'Jack and Jill';
 // The URL of the volunteer spreadsheet being accessed and modified
-const volunteerSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3Ccrqx_ckIaK5KQKn5MjdUzpnwqT7wEu5Pjm5M/edit';
-const nameOfVolunteerWorksheet = 'Volunteers';
+const volunteerSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/your-google-spreedsheet-uuid-number-here/edit';
+const nameOfVolunteerWorksheet = 'Sheet1';
 // The URL of the main spreadsheet being accessed and modified
-const neighborSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1vukLl3Ccrqx_ckIaK5KQKn5MjdUzpnwqT7wEu5Pjm5M/edit';
-const nameOfNeighborWorksheet = 'Neighbors';
+const neighborSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/your-other-google-spreedsheet-uuid-number-here/edit';
+const nameOfNeighborWorksheet = 'Sheet1';
 // The email address that volunteers and neighbors should reply to
-const replyTo = 'neighborhood.response.team@gmail.com';
+const replyTo = 'something@gmail.com';
 // The subject line for the three email templates;
 const subject = 'Welcome to Adopt a Neighbor ' + nameOfCommunity;
 // setting runFirstRowTest to true will cause the script to only process the first row
-const runFirstRowTest = false;
+const runFirstRowTest = true;
 
 // simple function that makes feeds substitution values to the email template
 const populateTemplateWithNameSubstitution = (template, name) => {
